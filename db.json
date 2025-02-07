@@ -1,0 +1,501 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "type": "text",
+        "question": "Escribe el comando para Cells-CLI que usarías para crear un componente Lit-element denominado bluff-grid para el dominio bbva-ui",
+        "answer": "cells lit-component:create bluff-grid @bbva-ui"
+      },
+      {
+        "id": 2,
+        "type": "multiple-choice",
+        "question": "¿En qué carpeta de la estructura de nuestro proyecto se alojan los componentes Lit que importamos?",
+        "options": [
+          "app/composerMocksTpl",
+          "components",
+          "app/pages",
+          "node_modules"
+        ],
+        "answer": "node_modules"
+      },
+      {
+        "id": 3,
+        "type": "matching",
+        "question": "Al crear una nueva aplicación Cells-CLI se crea una estructura de carpetas bajo la carpeta app. Enlaza cada descripción con la carpeta que le corresponde:",
+        "pairs": [
+          {
+            "description": "Carpeta que contiene todas las configuraciones que se desean tener para la aplicación.",
+            "folder": "config"
+          },
+          {
+            "description": "Carpeta que contiene todos los archivos que definen cada página de la aplicación.",
+            "folder": "pages"
+          },
+          {
+            "description": "Carpeta que contiene los componentes propios, aquellos que no se instalan con npm.",
+            "folder": "elements"
+          },
+          {
+            "description": "Carpeta que contiene los archivos de internacionalización.",
+            "folder": "locales-app"
+          },
+          {
+            "description": "Carpeta que contiene el app.js (para configurar Cells, definir rutas, etc.) y el initialcomponent.js (donde se colocan las dependencias que deben cargarse primero durante el inicio de la aplicación).",
+            "folder": "scripts"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "multiple-choice",
+        "question": "¿Cómo se llama la herramienta que permite guardar el apiKey de Openweb para los despliegues a Producción a través de la consola Ether?",
+        "options": [
+          "Consola Openweb",
+          "ECS-Secrets",
+          "ECS-CLI",
+          "Portunus"
+        ],
+        "answer": "ECS-Secrets"
+      },
+      {
+        "id": 5,
+        "type": "multiple-choice",
+        "question": "¿Se puede monitorizar trazas e2e (FrontEnd ASO-APX) en SEMaaS con aplicaciones Cells?",
+        "options": [
+          "Si, pero se tienen que setear correctamente las cabeceras x-rho-traceid y x-rho-parentspanid",
+          "Si, es una capacidad que ofrece por defecto Cells al invocar servicios ASO",
+          "Si, pero se tiene que setear correctamente la cabecera x-rho-e2e",
+          "No",
+          "Si, es una capacidad que ofrece por defecto SEMaaS",
+          "Si, pero se tiene que setear correctamente la cabecera x-rho-parentspanid",
+          "Si, pero se tiene que setear correctamente la cabecera x-rho-traceid"
+        ],
+        "answer": "Si, pero se tienen que setear correctamente las cabeceras x-rho-traceid y x-rho-parentspanid"
+      },
+      {
+        "id": 6,
+        "type": "multiple-choice",
+        "question": "¿Qué usamos en Cells para hacer las pruebas de accesibilidad en los componentes?",
+        "options": [
+          "Chai A11y aXe",
+          "axe-core",
+          "Mocha A11y",
+          "Pa11y"
+        ],
+        "answer": "axe-core"
+      },
+      {
+        "id": 7,
+        "type": "multiple-choice",
+        "question": "¿La arquitectura Cells es una arquitectura basada en web components?",
+        "options": [
+          "Verdadero",
+          "Falso"
+        ],
+        "answer": "Verdadero"
+      },
+      {
+        "id": 8,
+        "type": "multiple-choice",
+        "question": "¿Cuál de las siguientes afirmaciones con respecto al parámetro “deployToPro” es verdadera?",
+        "options": [
+          "Se usa para desplegar exclusivamente en el entorno de Producción Openweb",
+          "Se usa para desplegar simultáneamente en el entorno de Revisión y de Producción de Openweb.",
+          "Se usa para desplegar tanto en el entorno de Revisión como en el de Producción de Openweb",
+          "Se usa para desplegar exclusivamente en el entorno de Revisión de Openweb"
+        ],
+        "answer": "Se usa para desplegar tanto en el entorno de Revisión como en el de Producción de Openweb"
+      },
+      {
+        "id": 9,
+        "type": "multiple-choice",
+        "question": "¿En qué entornos se puede desplegar una aplicación a través de la consola Ether?",
+        "options": [
+          "AWS(S3), GCP, Openweb, Azure",
+          "AWS(S3), GCP, Openweb, localhost",
+          "AWS(S3), Azure, Openweb, localhost",
+          "AWS(S3), GCP, Openweb"
+        ],
+        "answer": "AWS(S3), GCP, Openweb, Azure"
+      },
+      {
+        "id": 10,
+        "type": "multiple-choice",
+        "question": "¿Cómo conseguimos que se ejecute el pipeline de Cells?",
+        "options": [
+          "Mediante la configuración del fichero Jenkinsfile de la raíz del proyecto con el tipo de artefacto correctamente configurado.",
+          "Mediante la solicitud al equipo DevOps para que incluyan nuestro proyecto en Jenkins",
+          "Mediante la configuración en Jenkins con los parámetros como url del repositorio de código y usuario y clave con acceso al mismo",
+          "Mediante la configuración en Jenkins de la url y el apiKey del repositorio en Bitbucket."
+        ],
+        "answer": "Mediante la configuración del fichero Jenkinsfile de la raíz del proyecto con el tipo de artefacto correctamente configurado."
+      },
+      {
+        "id": 11,
+        "type": "multiple-choice",
+        "question": "La comunicación entre componentes Cells se basa en el uso de canales que implementan el patrón Pub/Sub, pero ¿en qué librería se apoya para su construcción?",
+        "options": [
+          "RabbiMQ",
+          "RxJS",
+          "PubSubJS",
+          "Google Cloud pubsub"
+        ],
+        "answer": "RxJS"
+      },
+      {
+        "id": 12,
+        "type": "multiple-choice",
+        "question": "¿Qué tipo de componentes se manejan en Cells?",
+        "options": [
+          "Componentes de comunicación (MC)",
+          "Componentes cross (CC)",
+          "Componentes visuales (UI)",
+          "Componentes de configuración (SC)",
+          "Componentes de datos (DM)"
+        ],
+        "answer": [
+          "Componentes cross (CC)",
+          "Componentes visuales (UI)",
+          "Componentes de datos (DM)"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "multiple-choice",
+        "question": "¿Cómo se hace la integración con SEMaaS en Cells?",
+        "options": [
+          "La integración se realiza previa importación de la librería SEMaaS y la inclusión de un panel monitorizado.",
+          "La integración debe realizarse a través del webcomponent del catálogo global “bbva-core-semaas” que formatea y envía la traza a monitorizar.",
+          "La integración debe realizarla el aplicativo invocando al API de SEMAA S en los puntos que quiera monitorizar.",
+          "La integración la ofrece automáticamente Cells a través del Bridge; solo se necesita activarla mediante configuración."
+        ],
+        "answer": "La integración debe realizarse a través del webcomponent del catálogo global “bbva-core-semaas” que formatea y envía la traza a monitorizar."
+      },
+      {
+        "id": 14,
+        "type": "multiple-choice",
+        "question": "¿Pueden ejecutarse aplicaciones Cells sobre navegadores antiguos?",
+        "options": [
+          "Si, mediante desarrollos específicos para adaptarse a esos navegadores.",
+          "No, Cells solo puede correr sobre navegadores modernos como Chrome y Firefox.",
+          "Si, mediante el uso de polyfills."
+        ],
+        "answer": "Si, mediante el uso de polyfills."
+      },
+      {
+        "id": 15,
+        "type": "multiple-choice",
+        "question": "Si mantenemos nuestra aplicación desplegada en el entorno de revisión de Openweb, ¿mediante qué configuración de las siguientes podemos desplegarla directamente en Producción a través de la consola Ether?",
+        "options": [
+          "“promoteToPro” true",
+          "“deployToPro” true",
+          "“deployFromPre” true",
+          "“fromPreToPro” true"
+        ],
+        "answer": "“deployToPro” true"
+      },
+      {
+        "id": 16,
+        "type": "matching",
+        "question": "Enlaza el gestor de paquetes que se utiliza en Cells con el tipo de componente indicado",
+        "pairs": [
+          {
+            "description": "npm",
+            "folder": "Lit Element"
+          },
+          {
+            "description": "bower",
+            "folder": "Polymer"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "type": "multiple-choice",
+        "question": "¿Cómo se hace la integración con SEMaaS en Cells?",
+        "options": [
+          "La integración se realiza previa importación de la librería de SEMaaS y la inclusión de un pixel de monitorización.",
+          "La integración debe realizarse a través del webcomponent del catálogo global \"bbva-core-semaas\" que formatea y envía la traza a monitorizar.",
+          "La integración debe realizarla el aplicativo invocando al API de SEMaaS en los puntos que quiera monitorizar.",
+          "La integración la ofrece automáticamente Cells a través del Bridge, solo se necesita activarla mediante configuración."
+        ],
+        "answer": "La integración debe realizarse a través del webcomponent del catálogo global \"bbva-core-semaas\" que formatea y envía la traza a monitorizar."
+      },
+      {
+        "id": 18,
+        "type": "multiple-choice",
+        "question": "¿Qué tipos de componentes se manejan en Cells?",
+        "options": [
+          "Componentes cross (CC)",
+          "Componentes de configuracion (SC)",
+          "Componentes visuales (Ul)",
+          "Componentes de datos (DM)",
+          "Componentes de comunicacion (MC)"
+        ],
+        "answer": "Componentes visuales (Ul)"
+      },
+      {
+        "id": 19,
+        "type": "multiple-choice",
+        "question": "¿Como se llama la herramienta que permite guardar el apiKey de Openweb para los despliegues a Produccion a través de la consola Ether?",
+        "options": [
+          "Consola Openweb",
+          "ECS-CLI",
+          "Portunus",
+          "ECS-Secrets"
+        ],
+        "answer": "ECS-Secrets"
+      },
+      {
+        "id": 20,
+        "type": "multiple-choice",
+        "question": "¿Como conseguimos que se ejecute el pipeline de Cells?",
+        "options": [
+          "Mediante la configuracion en Jenkins con los parametros como url del repositorio de cddigo y usuario y clave con acceso al mismo.",
+          "Mediante la configuracion del fichero Jenkinsfile de la raiz del proyecto con el tipo de artefacto correctamente configurado.",
+          "Mediante la configuracion en Jenkins de la url y el apiKey del repositorio en Bitbucket",
+          "Mediante la solicitud al equipo DevOps para que incluyan nuestro proyecto en Jenkins"
+        ],
+        "answer": "Mediante la configuracion del fichero Jenkinsfile de la raiz del proyecto con el tipo de artefacto correctamente configurado."
+      },
+      {
+        "id": 21,
+        "type": "multiple-choice",
+        "question": "Selecciona los modos con los que definir paginas en Cells",
+        "options": [
+          "Modo imperativo",
+          "Modo jerarquico",
+          "Modo estatico",
+          "Modo declarativo",
+          "Modo composer",
+          "Modo dinamico"
+        ],
+        "answer": "Modo declarativo"
+      },
+      {
+        "id": 22,
+        "type": "multiple-choice",
+        "question": "Permite Cells comprimir los bundles que genera? Elige la mejor respuesta",
+        "options": [
+          "No",
+          "Si, a partir del cells-cli@1.3.0",
+          "Si, con gzip, 7-zip y brotli",
+          "Si, a partir del cells-cli@3.3.0"
+        ],
+        "answer": "Si, a partir del cells-cli@3.3.0"
+      },
+      {
+        "id": 23,
+        "type": "multiple-choice",
+        "question": "La arquitectura Cells es una arquitectura basada en webcomponents?",
+        "options": [
+          "Verdadero",
+          "Falso"
+        ],
+        "answer": "Verdadero"
+      },
+      {
+        "id": 24,
+        "type": "text",
+        "question": "Ordena los pasos para ejecutar los test e2e en una aplicación:\n1. Ejecuta \"cells app:serve -c dev.json\"\n2. Abre otro terminal\n3. Copia la url donde se está ejecutando la app\n4. Ejecuta \"./node_modules/.bin/cells-pepino -u <url> -c <test_config_file>\"\n5. Abre un nuevo terminal\n6. Localiza el fichero .js con las variables para las pruebas\n7. Revisa el informe de resultados",
+        "answer": "1. Ejecuta \"cells app:serve -c dev.json\"; 2. Abre otro terminal; 3. Copia la url donde se está ejecutando la app; 4. Ejecuta \"./node_modules/.bin/cells-pepino -u <url> -c <test_config_file>\"; 5. Abre un nuevo terminal; 6. Localiza el fichero .js con las variables para las pruebas; 7. Revisa el informe de resultados"
+      },
+      {
+        "id": 25,
+        "type": "multiple-choice",
+        "question": "¿Qué usamos en Cells para hacer las pruebas de accesibilidad en los componentes?",
+        "options": [
+          "MochaAlly",
+          "axe-core",
+          "Patty",
+          "ChaiA11y aXe"
+        ],
+        "answer": "axe-core"
+      },
+      {
+        "id": 26,
+        "type": "multiple-choice",
+        "question": "¿Qué patrén/pattern usa el Bridge para instanciar los Cross Components (CC)?",
+        "options": [
+          "Adapter/Wrapper pattern",
+          "Singleton pattern",
+          "Facade pattern",
+          "Abstract pattern",
+          "Observer pattern",
+          "State pattern"
+        ],
+        "answer": "Adapter/Wrapper pattern"
+      },
+      {
+        "id": 27,
+        "type": "multiple-choice",
+        "question": "Se puede monitorizar trazas e2e (FrontEnd-ASO-APX) en SEMaaS con aplicaciones Cells?",
+        "options": [
+          "Si, pero se tiene que setear correctamente la cabecera x-rho-traceid",
+          "Si, pero se tiene que setear correctamente la cabecera x-rho-parentspanid",
+          "Si, pero se tiene que setear correctamente la cabecera x-rho-e2e",
+          "Si, es una capacidad que ofrece por defecto Cells al invocar a servicios ASO",
+          "Si, pero se tienen que setear correctamente las cabeceras x-rho-traceid y x-rho-parentspanid",
+          "Si, es una capacidad que ofrece por defecto SEMaaS",
+          "No"
+        ],
+        "answer": "Si, pero se tienen que setear correctamente las cabeceras x-rho-traceid y x-rho-parentspanid"
+      },
+      {
+        "id": 28,
+        "type": "multiple-choice",
+        "question": "Cual de las siguientes afirmaciones con respecto al parametro \"deploy ToPro\" es verdadera?",
+        "options": [
+          "Se usa para desplegar exclusivamente en el entorno de Revision de Openweb.",
+          "Se usa para desplegar exclusivamente en el entorno de Produccion de Openweb.",
+          "Se usa para desplegar primero en el entorno de Revision y cuando ha finalizado en el de Produccion de Openweb.",
+          "Se usa para desplegar en Produccion sin pasar por el entorno de Revision de Openweb.",
+          "Se usa para desplegar concurrentemente en el entorno de Revision y de Produccién de Openweb."
+        ],
+        "answer": "Se usa para desplegar concurrentemente en el entorno de Revision y de Produccién de Openweb."
+      },
+      {
+        "id": 29,
+        "type": "multiple-choice",
+        "question": "En qué carpeta de la estructura de nuestro proyecto se alojan los componentes Lit que importamos?",
+        "options": [
+          "node_modules",
+          "components",
+          "app/composerMocksTpl",
+          "app/pages"
+        ],
+        "answer": "node_modules"
+      },
+      {
+        "id": 30,
+        "type": "multiple-choice",
+        "question": "Qué propiedad es necesario configurar para que Cells genere Service Workers (SW)?",
+        "options": [
+          "Ninguna, Cells genera aplicaciones SPA",
+          "Ninguna, Cells ofrece esta capacidad por defecto",
+          "Hay que incluir y establecer a true la propiedad \"enable_sw\"",
+          "Hay que incluir en la carpeta /sw la definicion del SW que queramos generar con la siguiente nomenclatura \"cells-sw-nombre_SW json”"
+        ],
+        "answer": "Hay que incluir y establecer a true la propiedad \"enable_sw\""
+      },
+      {
+        "id": 31,
+        "type": "multiple-choice",
+        "question": "Si tengo una aplicacion con componentes Polymer, ¿qué tipo de construccion no deberia utilizar si quiero ejecutarla en navegadores antiguos o en IE11?",
+        "options": [
+          "develop",
+          "vulcanize",
+          "novulcanize"
+        ],
+        "answer": "vulcanize"
+      },
+      {
+        "id": 32,
+        "type": "multiple-choice",
+        "question": "En qué carpeta de la estructura de nuestro proyecto se alojan los componentes Lit que importamos?",
+        "options": [
+          "node_modules",
+          "app/pages",
+          "app/composerMocksTpl",
+          "components"
+        ],
+        "answer": "node_modules"
+      },
+      {
+        "id": 33,
+        "type": "matching",
+        "question": "Al crear una nueva aplicacion con Cells-CLI se crea una estructura de carpetas bajo la carpeta app. Enlaza cada descripcion con la carpeta que le corresponde.",
+        "pairs": [
+          {
+            "description": "Carpeta que contiene los archivos que definen cada pagina de la aplicacion.",
+            "folder": "pages"
+          },
+          {
+            "description": "Carpeta que contiene los archivos de ssleccionsr - internacionalizacion.",
+            "folder": "locales-app"
+          },
+          {
+            "description": "Carpeta que contiene los componentes propios, aquellos que no se instalan con npm.",
+            "folder": "elements"
+          },
+          {
+            "description": "Carpeta que contiene todas las configuraciones que se desean tener para la aplicacion.",
+            "folder": "config"
+          },
+          {
+            "description": "Carpeta que contiene el app.js (que se usa para configurar Cells, escribir las rutas, etc.), el litinitialComponents.js (donde se colocan las dependencias que deben cargarse primero durante el inicio de la aplicacion), etc.",
+            "folder": "scripts"
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "type": "multiple-choice",
+        "question": "Qué tipos de componentes se manejan en Cells?",
+        "options": [
+          "Componentes de configuracion (SC)",
+          "Componentes visuales (Ul)",
+          "Componentes cross (CC)",
+          "Componentes de comunicacién (MC)",
+          "Componentes de datos (DM)"
+        ],
+        "answer": "Componentes visuales (Ul)"
+      },
+      {
+        "id": 35,
+        "type": "multiple-choice",
+        "question": "¿Como se hace la integracion con SEMaaS en Cells?",
+        "options": [
+          "Laintegracion debe realizarse a través del webcomponent del catalogo global \"bbva-core-semaas” que formatea y envia la traza a monitorizar.",
+          "Laintegracion la ofrece automaticamente Cells a través del Bridge, solo se necesita activarla mediante configuracion.",
+          "Laintegracion se realiza previa importacion de la libreria de SEMaaS y la inclusion de un pixel de monitorizacion.",
+          "La integracion debe realizarla el aplicativo invocando al API de SEMaaS en los puntos que quiera monitorizar."
+        ],
+        "answer": "Laintegracion debe realizarse a través del webcomponent del catalogo global \"bbva-core-semaas” que formatea y envia la traza a monitorizar."
+      },
+      {
+        "id": 36,
+        "type": "multiple-choice",
+        "question": "Se pueden filrar las trazas de log a enviar a SEMaaS en funcion de su nivel?",
+        "options": [
+          "Si, pero sdlo a partir de la version de Cells Bridge 3.16.0",
+          "No.",
+          "Si, pero sélo a partir de la version de Cells CLI 3.3.0",
+          "Si, desde la version inicial de Cells Bridge hasta la version de Cells Bridge 3.16.0",
+          "Si, desde la version inicial de Cells CLI hasta la version de Cells CLI 3.3.0"
+        ],
+        "answer": "Si, pero sdlo a partir de la version de Cells Bridge 3.16.0"
+      },
+      {
+        "id": 37,
+        "type": "multiple-choice",
+        "question": "Selecciona los catalogos que conforman el catalogo global de Cells y que se pueden consultar a través de https://platform.bbva.com/ -> Catalogs -> Cells",
+        "options": [
+          "BBVA Global Web Components",
+          "BBVA Global Web Components Foundations",
+          "BBVA Global Web Components CC",
+          "Components Catalog Legacy",
+          "BBVA Global Web Components MOBILE",
+          "BBVA Global Web Components WEB",
+          "BBVA Global Web Components CORE",
+          "BBVA Global Web Components DM"
+        ],
+        "answer": [
+          "BBVA Global Web Components",
+          "BBVA Global Web Components Foundations",
+          "BBVA Global Web Components CC",
+          "BBVA Global Web Components MOBILE",
+          "BBVA Global Web Components WEB",
+          "BBVA Global Web Components CORE",
+          "BBVA Global Web Components DM"
+        ]
+      },
+      {
+        "id": 38,
+        "type": "text",
+        "question": "Escribe el comando que usarias en Cells-CLI para servir una aplicacion Lit-element con el fichero de configuracion dev.json",
+        "answer": "cells app:serve -c dev.json"
+      }
+    ]
+  }
+  
