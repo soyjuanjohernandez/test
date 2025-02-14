@@ -116,7 +116,7 @@
           "AWS(S3), Azure, Openweb, localhost",
           "AWS(S3), GCP, Openweb"
         ],
-        "answer": "AWS(S3), GCP, Openweb, Azure"
+        "answer": "AWS(S3), GCP, Openweb"
       },
       {
         "id": 10,
@@ -495,7 +495,32 @@
         "type": "text",
         "question": "Escribe el comando que usarias en Cells-CLI para servir una aplicacion Lit-element con el fichero de configuracion dev.json",
         "answer": "cells app:serve -c dev.json"
+      },
+      {
+        "id": 39,
+        "type": "multiple-choice",
+        "question": "Escribe el comando que usarias en Cells-CLI para servir una aplicacion Lit-element con el fichero de configuracion dev.json",
+        "options": [
+            "Chai A11y aXe" ,
+            "axe-core" ,
+            "Mocha A11y" ,
+            "Pa11y" 
+        ],
+        "answer": "Chai A11y aXe"
+      },
+      {
+        "id": 40,
+        "type": "multiple-choice",
+        "question": "¿Qué es  Cells?",
+        "options": [
+            "Cells es unaframework basado en componentes" ,
+            "Cells es una arquitectura basada en componentes" ,
+            "Cells es una Librería basada en componentes" ,
+            "Pa11y" 
+        ],
+        "answer": "Cells es una arquitectura basada en componentes"
       }
+
     ]
   }
   
