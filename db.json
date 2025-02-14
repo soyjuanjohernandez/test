@@ -7,18 +7,6 @@
         "answer": "cells lit-component:create bluff-grid @bbva-ui"
       },
       {
-        "id": 2,
-        "type": "multiple-choice",
-        "question": "¿En qué carpeta de la estructura de nuestro proyecto se alojan los componentes Lit que importamos?",
-        "options": [
-          "app/composerMocksTpl",
-          "components",
-          "app/pages",
-          "node_modules"
-        ],
-        "answer": "node_modules"
-      },
-      {
         "id": 3,
         "type": "matching",
         "question": "Al crear una nueva aplicación Cells-CLI se crea una estructura de carpetas bajo la carpeta app. Enlaza cada descripción con la carpeta que le corresponde:",
@@ -222,19 +210,6 @@
         "answer": "La integración debe realizarse a través del webcomponent del catálogo global \"bbva-core-semaas\" que formatea y envía la traza a monitorizar."
       },
       {
-        "id": 18,
-        "type": "multiple-choice",
-        "question": "¿Qué tipos de componentes se manejan en Cells?",
-        "options": [
-          "Componentes cross (CC)",
-          "Componentes de configuracion (SC)",
-          "Componentes visuales (Ul)",
-          "Componentes de datos (DM)",
-          "Componentes de comunicacion (MC)"
-        ],
-        "answer": "Componentes visuales (Ul)"
-      },
-      {
         "id": 19,
         "type": "multiple-choice",
         "question": "¿Como se llama la herramienta que permite guardar el apiKey de Openweb para los despliegues a Produccion a través de la consola Ether?",
@@ -296,26 +271,43 @@
       },
       {
         "id": 24,
-        "type": "text",
-        "question": "Ordena los pasos para ejecutar los test e2e en una aplicación:\n1. Ejecuta \"cells app:serve -c dev.json\"\n2. Abre otro terminal\n3. Copia la url donde se está ejecutando la app\n4. Ejecuta \"./node_modules/.bin/cells-pepino -u <url> -c <test_config_file>\"\n5. Abre un nuevo terminal\n6. Localiza el fichero .js con las variables para las pruebas\n7. Revisa el informe de resultados",
-        "answer": "1. Ejecuta \"cells app:serve -c dev.json\"; 2. Abre otro terminal; 3. Copia la url donde se está ejecutando la app; 4. Ejecuta \"./node_modules/.bin/cells-pepino -u <url> -c <test_config_file>\"; 5. Abre un nuevo terminal; 6. Localiza el fichero .js con las variables para las pruebas; 7. Revisa el informe de resultados"
-      },
-      {
-        "id": 25,
-        "type": "multiple-choice",
-        "question": "¿Qué usamos en Cells para hacer las pruebas de accesibilidad en los componentes?",
-        "options": [
-          "MochaAlly",
-          "axe-core",
-          "Patty",
-          "ChaiA11y aXe"
-        ],
-        "answer": "axe-core"
+        "type": "matching",
+        "question": "Ordena los pasos para ejecutar los test e2e en una aplicación:",
+        "pairs": [
+            {
+              "description": "Ejecuta \"cells app:serve -c dev.json\"",
+              "folder": "1"
+            },
+            {
+              "description": "Abre otro terminal",
+              "folder": "2"
+            },
+            {
+              "description": "Abre un nuevo terminal",
+              "folder": "5"
+            },
+            {
+              "description": "Localiza el fichero .js con las variables para las pruebas",
+              "folder": "6"
+            },
+            {
+              "description": "Ejecuta \"./node_modules/.bin/cells-cucumber -u <url> -c <test_config_file>\"",
+              "folder": "4"
+            },
+            {
+              "description": "Revisa el informe de resultados",
+              "folder": "7"
+            },
+            {
+              "description": "Copia la url donde se está ejecutando la app",
+              "folder": "3"
+            }
+          ]
       },
       {
         "id": 26,
         "type": "multiple-choice",
-        "question": "¿Qué patrén/pattern usa el Bridge para instanciar los Cross Components (CC)?",
+        "question": "¿Qué patrón/pattern usa el Bridge para instanciar los Cross Components (CC)?",
         "options": [
           "Adapter/Wrapper pattern",
           "Singleton pattern",
@@ -324,7 +316,7 @@
           "Observer pattern",
           "State pattern"
         ],
-        "answer": "Adapter/Wrapper pattern"
+        "answer": "Singleton pattern"
       },
       {
         "id": 27,
@@ -390,18 +382,6 @@
         "answer": "vulcanize"
       },
       {
-        "id": 32,
-        "type": "multiple-choice",
-        "question": "En qué carpeta de la estructura de nuestro proyecto se alojan los componentes Lit que importamos?",
-        "options": [
-          "node_modules",
-          "app/pages",
-          "app/composerMocksTpl",
-          "components"
-        ],
-        "answer": "node_modules"
-      },
-      {
         "id": 33,
         "type": "matching",
         "question": "Al crear una nueva aplicacion con Cells-CLI se crea una estructura de carpetas bajo la carpeta app. Enlaza cada descripcion con la carpeta que le corresponde.",
@@ -427,19 +407,6 @@
             "folder": "scripts"
           }
         ]
-      },
-      {
-        "id": 34,
-        "type": "multiple-choice",
-        "question": "Qué tipos de componentes se manejan en Cells?",
-        "options": [
-          "Componentes de configuracion (SC)",
-          "Componentes visuales (Ul)",
-          "Componentes cross (CC)",
-          "Componentes de comunicacién (MC)",
-          "Componentes de datos (DM)"
-        ],
-        "answer": "Componentes visuales (Ul)"
       },
       {
         "id": 35,
@@ -497,30 +464,16 @@
         "answer": "cells app:serve -c dev.json"
       },
       {
-        "id": 39,
-        "type": "multiple-choice",
-        "question": "Escribe el comando que usarias en Cells-CLI para servir una aplicacion Lit-element con el fichero de configuracion dev.json",
-        "options": [
-            "Chai A11y aXe" ,
-            "axe-core" ,
-            "Mocha A11y" ,
-            "Pa11y" 
-        ],
-        "answer": "Chai A11y aXe"
-      },
-      {
         "id": 40,
         "type": "multiple-choice",
         "question": "¿Qué es  Cells?",
         "options": [
-            "Cells es unaframework basado en componentes" ,
+            "Cells es un framework basado en componentes" ,
             "Cells es una arquitectura basada en componentes" ,
-            "Cells es una Librería basada en componentes" ,
-            "Pa11y" 
+            "Cells es una Librería basada en componentes" 
         ],
         "answer": "Cells es una arquitectura basada en componentes"
       }
-
     ]
   }
   
