@@ -243,9 +243,9 @@
           "Modo estatico",
           "Modo declarativo",
           "Modo composer",
-          "Modo dinamico"
+          "Modo dinámico"
         ],
-        "answer": "Modo declarativo"
+        "answer":[ "Modo declarativo", "Modo dinámico"]
       },
       {
         "id": 22,
@@ -382,45 +382,6 @@
         "answer": "vulcanize"
       },
       {
-        "id": 33,
-        "type": "matching",
-        "question": "Al crear una nueva aplicacion con Cells-CLI se crea una estructura de carpetas bajo la carpeta app. Enlaza cada descripcion con la carpeta que le corresponde.",
-        "pairs": [
-          {
-            "description": "Carpeta que contiene los archivos que definen cada pagina de la aplicacion.",
-            "folder": "pages"
-          },
-          {
-            "description": "Carpeta que contiene los archivos de ssleccionsr - internacionalizacion.",
-            "folder": "locales-app"
-          },
-          {
-            "description": "Carpeta que contiene los componentes propios, aquellos que no se instalan con npm.",
-            "folder": "elements"
-          },
-          {
-            "description": "Carpeta que contiene todas las configuraciones que se desean tener para la aplicacion.",
-            "folder": "config"
-          },
-          {
-            "description": "Carpeta que contiene el app.js (que se usa para configurar Cells, escribir las rutas, etc.), el litinitialComponents.js (donde se colocan las dependencias que deben cargarse primero durante el inicio de la aplicacion), etc.",
-            "folder": "scripts"
-          }
-        ]
-      },
-      {
-        "id": 35,
-        "type": "multiple-choice",
-        "question": "¿Como se hace la integracion con SEMaaS en Cells?",
-        "options": [
-          "Laintegracion debe realizarse a través del webcomponent del catalogo global \"bbva-core-semaas” que formatea y envia la traza a monitorizar.",
-          "Laintegracion la ofrece automaticamente Cells a través del Bridge, solo se necesita activarla mediante configuracion.",
-          "Laintegracion se realiza previa importacion de la libreria de SEMaaS y la inclusion de un pixel de monitorizacion.",
-          "La integracion debe realizarla el aplicativo invocando al API de SEMaaS en los puntos que quiera monitorizar."
-        ],
-        "answer": "Laintegracion debe realizarse a través del webcomponent del catalogo global \"bbva-core-semaas” que formatea y envia la traza a monitorizar."
-      },
-      {
         "id": 36,
         "type": "multiple-choice",
         "question": "Se pueden filrar las trazas de log a enviar a SEMaaS en funcion de su nivel?",
@@ -460,8 +421,8 @@
       {
         "id": 38,
         "type": "text",
-        "question": "Escribe el comando que usarias en Cells-CLI para servir una aplicacion Lit-element con el fichero de configuracion dev.json",
-        "answer": "cells app:serve -c dev.json"
+        "question": "Escribe el comando que usarias en Cells-CLI para servir una aplicacion Lit-element con el fichero de configuracion dev.js",
+        "answer": "cells app:serve -c dev.js"
       },
       {
         "id": 40,

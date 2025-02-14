@@ -33,7 +33,7 @@ body {
   margin-bottom: 37px;
 }
 
-.question-container {
+.question-container, .test-result {
   border: 1px solid #0044812e;
   backdrop-filter: blur(4px);
   padding: 50px 40px;
@@ -214,4 +214,19 @@ ul {
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+.test-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.test-result h1:first-child{
+  margin-bottom: 50px;
+}
+.test-result h1{
+  margin-bottom: 5px;
+}
+.test-result hr{
+  width: 40%;
 }

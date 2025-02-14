@@ -56,10 +56,23 @@ function App() {
     const percentage = Math.round((score / questions.length) * 100);
     return (
       <div className="App">
-        <h1>Resultado del Test</h1>
-        <p>Puntuación: {score} de {questions.length}</p>
-        <p>Porcentaje: {percentage}%</p>
-        <button onClick={handleRestart} className="restart-button">Reiniciar Test</button>
+        <div className="test-result">
+          <h1>Resultado del Test</h1>
+          <h1>
+            {score} de {questions.length}
+          </h1>
+          <hr />
+          <h2>Puntuación</h2>
+          <br />
+          <br />
+          <h1>
+            {percentage}%
+          </h1>
+          <hr />
+          <h2>Porcentaje</h2>
+          <br />
+          <button onClick={handleRestart} className="restart-button">Reiniciar Test</button>
+        </div>
       </div>
     );
   }
