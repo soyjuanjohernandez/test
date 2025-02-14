@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
+
+import Questions from '../db.json';
 
 function App() {
   // Estados generales
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  
+
   // Para preguntas de opción múltiple de selección única
   const [selectedOption, setSelectedOption] = useState(null);
   // Para preguntas de opción múltiple que permiten seleccionar varias respuestas
@@ -14,7 +16,7 @@ function App() {
   const [textAnswer, setTextAnswer] = useState("");
   // Para preguntas de matching
   const [matchingAnswers, setMatchingAnswers] = useState({});
-  
+
   // Estados para feedback y puntaje
   const [showFeedback, setShowFeedback] = useState(false);
   const [answerCorrect, setAnswerCorrect] = useState(null); // true/false
@@ -23,10 +25,9 @@ function App() {
 
   // Cargar preguntas desde json-server (db.json)
   useEffect(() => {
-    fetch('http://localhost:3001/questions')
-      .then(response => response.json())
-      .then(data => setQuestions(data))
-      .catch(error => console.error("Error al cargar las preguntas:", error));
+    // Simulación de carga de preguntas
+    setQuestions(Questions.questions);
+
   }, []);
 
   // Mientras no se hayan cargado las preguntas
@@ -144,7 +145,7 @@ function App() {
     }
   };
 
- 
+
 
   // --- Renderizado del feedback ---
   const renderFeedback = () => {
@@ -198,7 +199,7 @@ function App() {
             <div className="options-container">
               {currentQuestion.options.map((option, index) => (
                 <label key={index} className="option-label">
-                  <input 
+                  <input
                     type="checkbox"
                     value={option}
                     checked={selectedOptions.includes(option)}
@@ -239,32 +240,40 @@ function App() {
               value={textAnswer}
               onChange={(e) => setTextAnswer(e.target.value)}
               placeholder="Escribe tu respuesta..."
+              disabled={showFeedback}
             />
-            <button onClick={handleTextSubmit} className="submit-button">Enviar Respuesta</button>
+            {!showFeedback && (
+              <button onClick={handleTextSubmit} className="submit-button">Enviar Respuesta</button>
+            )}
           </div>
         );
       case "matching":
-        // Para preguntas de matching, se utiliza el arreglo de pares
-        const folderOptions = currentQuestion.pairs.map(pair => pair.folder);
-        return (
-          <div className="matching-question">
-            {currentQuestion.pairs.map((pair, index) => (
-              <div key={index} className="matching-item">
-                <span className="description">{pair.description}</span>
-                <select
-                  value={matchingAnswers[index] || ""}
-                  onChange={(e) => handleMatchingChange(index, e.target.value)}
-                >
-                  <option value="" disabled>Selecciona una carpeta</option>
-                  {folderOptions.map((folder, i) => (
-                    <option key={i} value={folder}>{folder}</option>
-                  ))}
-                </select>
-              </div>
-            ))}
-            <button onClick={handleMatchingSubmit} className="submit-button">Enviar Respuestas</button>
-          </div>
-        );
+        {
+          // Para preguntas de matching, se utiliza el arreglo de pares
+          const folderOptions = currentQuestion.pairs.map(pair => pair.folder);
+          return (
+            <div className="matching-question">
+              {currentQuestion.pairs.map((pair, index) => (
+                <div key={index} className="matching-item">
+                  <span className="description">{pair.description}</span>
+                  <select
+                    value={matchingAnswers[index] || ""}
+                    onChange={(e) => handleMatchingChange(index, e.target.value)}
+                  >
+                    <option value="" disabled>Selecciona una carpeta</option>
+                    {folderOptions.map((folder, i) => (
+                      <option key={i} value={folder}>{folder}</option>
+                    ))}
+                  </select>
+                </div>
+              ))}
+
+              {!showFeedback && (
+                <button onClick={handleMatchingSubmit} className="submit-button">Enviar Respuestas</button>
+              )}
+            </div>
+          );
+        }
       default:
         return <p>Tipo de pregunta no soportado.</p>;
     }
@@ -272,15 +281,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Test de Preguntas</h1>
+      <h1>Test Cells</h1>
       <div className="question-container">
-        <h2>{currentQuestion.question}</h2>
+        <h3>{currentQuestion.question}</h3>
         {renderQuestionContent()}
         {showFeedback && (
-          <div className="feedback">
-            {renderFeedback()}
+          <>
+            <div className="feedback">
+              {renderFeedback()}
+            </div>
             <button onClick={handleNext} className="next-button">Siguiente Pregunta</button>
-          </div>
+          </>
         )}
       </div>
     </div>
