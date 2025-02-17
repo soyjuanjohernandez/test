@@ -242,10 +242,6 @@ button {
 
 
 @media (780px >=width) {
-  .App {
-    height: calc(100vh - 70px);
-  }
-
   .App h1 {
     font-size: 2em;
   }
