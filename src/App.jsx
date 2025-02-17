@@ -273,7 +273,7 @@ function App() {
                     value={matchingAnswers[index] || ""}
                     onChange={(e) => handleMatchingChange(index, e.target.value)}
                   >
-                    <option value="" disabled>Selecciona una carpeta</option>
+                    <option value="" disabled>Selecciona una opción</option>
                     {folderOptions.map((folder, i) => (
                       <option key={i} value={folder}>{folder}</option>
                     ))}
