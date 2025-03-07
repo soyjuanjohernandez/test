@@ -294,7 +294,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Test Cells</h1>
+      <h1>Test {Questions.title}</h1>
       <div className="question-container">
         <h3>{currentQuestion.question}</h3>
         {renderQuestionContent()}
